@@ -8,8 +8,17 @@
         },
         "sourceType": "module"
     },
-    "plugins": [ "react", "requirejs" ],
-    "extends": [ "standard-jsx" ],
+    "plugins": [
+        "react",
+        "requirejs"
+    ],
+    "extends": [
+        "standard-jsx"
+    ],
+    "env": {
+        "browser": true,
+        "node": true
+    },
     "rules": {
         "react/jsx-no-bind": [
             "error",
@@ -24,19 +33,43 @@
         "react/no-unused-prop-types": 1,
         "react/prop-types": 1,
         "react/react-in-jsx-scope": 1,
-        "strict": [ 1, "safe" ],
+        "strict": [
+            1,
+            "safe"
+        ],
         "no-debugger": 1,
-        "brace-style": [ 1, "1tbs", { "allowSingleLine": true } ],
+        "brace-style": [
+            1,
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
         "no-trailing-spaces": 1,
         "keyword-spacing": 1,
-        "space-before-function-paren": [ 1, "never" ],
-        "spaced-comment": [1,"always"],
+        "space-before-function-paren": [
+            1,
+            "never"
+        ],
+        "spaced-comment": [
+            1,
+            "always"
+        ],
         "vars-on-top": 1,
         "no-undef": 1,
         "no-undefined": 1,
-        "comma-dangle": [1,"never"],
-        "quotes": [1,"single"],
-        "semi": [1,"always"],
+        "comma-dangle": [
+            1,
+            "never"
+        ],
+        "quotes": [
+            1,
+            "single"
+        ],
+        "semi": [
+            1,
+            "always"
+        ],
         "guard-for-in": 1,
         "no-eval": 1,
         "no-with": 1,
@@ -47,9 +80,19 @@
         "no-unreachable": 1,
         "no-unused-expressions": 1,
         "no-magic-numbers": 0,
-        "max-len": [ 1, 1000, 4 ],
+        "max-len": [
+            1,
+            1000,
+            4
+        ],
         "react/prefer-es6-class": 1,
-        "indent": [ 1, 4 ],
-        "react/jsx-indent": [ 1, 4 ]
+        "indent": [
+            1,
+            4
+        ],
+        "react/jsx-indent": [
+            1,
+            4
+        ]
     }
 }

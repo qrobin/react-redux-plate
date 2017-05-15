@@ -1,7 +1,7 @@
-const webpack = require('webpack')
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const outputPath = path.resolve(__dirname, './dist')
+const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const outputPath = path.resolve(__dirname, './dist');
 
 const webpackConfig = {
     entry: {
@@ -18,15 +18,26 @@ const webpackConfig = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: 'babel-loader',
+                use: 'babel-loader'
             },
+            // {
+            //     test: /\.scss$/,
+            //     exclude: /node_modules/,
+            //     use: [
+            //         'style-loader',
+            //         'css-loader',
+            //         'sass-loader',
+            //     ]
+            // },
             {
-                test: /\.scss$/,
+                test: /\.styl$/,
                 exclude: /node_modules/,
                 use: [
                     'style-loader',
                     'css-loader',
-                    'sass-loader',
+                    {
+                        loader: 'stylus-loader'
+                    }
                 ]
             },
             {
@@ -42,21 +53,25 @@ const webpackConfig = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, './src/assets/index.html'),
             filename: 'index.html',
-            path: outputPath,
+            path: outputPath
         }),
 
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.ProgressPlugin(),
+        new webpack.SourceMapDevToolPlugin()
     ],
 
     devServer: {
         contentBase: path.resolve(__dirname, './dist'),
+        compress: true,
         port: 3000,
         historyApiFallback: true,
-        inline: true,
         hot: true,
         host: '0.0.0.0',
+        stats: 'minimal',
+        clientLogLevel: 'none'
     }
-}
+};
 
 module.exports = webpackConfig;
