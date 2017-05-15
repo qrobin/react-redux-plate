@@ -1,5 +1,7 @@
 # React boilerplate
 
+> DO NOT USE
+
 ## What's inside?
 - `webpack 2`
 - `stylus` (can be easily changed to `sass`)
