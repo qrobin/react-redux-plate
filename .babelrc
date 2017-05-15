@@ -1,0 +1,14 @@
+{
+    "presets": [
+        [ "es2015", { "modules": false } ],
+        "react",
+        "stage-0",
+        "react-hmre"
+    ],
+    "plugins": [
+        ["module-alias", [
+            { "src": "./src/components", "expose": "components" }
+        ]
+    ]
+  ]
+}
