@@ -7,9 +7,11 @@
 - `redux`
 - `babel plugin for aliases`
 
-To set `sass` as your styles preprocessor, just go to `webpack.config.js`, uncomment 23-31 lines and restart dev-server.
+To set `sass` as your styles preprocessor, just go to `webpack.config.js`, uncomment *23-31 lines* and restart dev-server.
 
-To try it out just clone the repository
+___
+
+**To try it out** just clone the repository
 
 `git clone https://github.com/ababba15/react-redux-plate.git`
 
