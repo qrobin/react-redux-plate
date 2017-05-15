@@ -13,4 +13,6 @@ To try it out just clone the repository
 
 ...and run 
 
-`npm start` (or `yarn start`) from app's root.
+`npm start` (or `yarn start`) from the app's root,
+
+then open `http://localhost:3000` in your browser.
